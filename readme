@@ -1,0 +1,6 @@
+g++ -I include src/main.cpp src/solutions/Day1.cpp src/helpers/filereader.cpp -o day1
+
+./day1.exe
+
+
+g++ -I include src/main.cpp src/solutions/Day2.cpp -o day2
