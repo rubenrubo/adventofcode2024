@@ -1,4 +1,4 @@
-#include <vector> // Include for std::vector
+#include <vector>
 
 class Day1
 {
