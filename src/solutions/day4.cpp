@@ -18,26 +18,18 @@ void Day4::SolvePartOne()
 
             // left to right
             words.push_back(std::string() + getChar(grid, x, y) + getChar(grid, x + 1, y) + getChar(grid, x + 2, y) + getChar(grid, x + 3, y));
-            // right to left
-            words.push_back(std::string() + getChar(grid, x, y) + getChar(grid, x - 1, y) + getChar(grid, x - 2, y) + getChar(grid, x - 3, y));
 
             // top to bottom
             words.push_back(std::string() + getChar(grid, x, y) + getChar(grid, x, y + 1) + getChar(grid, x, y + 2) + getChar(grid, x, y + 3));
-            // bottom to top
-            words.push_back(std::string() + getChar(grid, x, y) + getChar(grid, x, y - 1) + getChar(grid, x, y - 2) + getChar(grid, x, y - 3));
 
             // diagonal top to bottom right
             words.push_back(std::string() + getChar(grid, x, y) + getChar(grid, x + 1, y + 1) + getChar(grid, x + 2, y + 2) + getChar(grid, x + 3, y + 3));
-            // diagonal top to bottom left
-            words.push_back(std::string() + getChar(grid, x, y) + getChar(grid, x - 1, y + 1) + getChar(grid, x - 2, y + 2) + getChar(grid, x - 3, y + 3));
 
             // diagonal bottom to top right
             words.push_back(std::string() + getChar(grid, x, y) + getChar(grid, x + 1, y - 1) + getChar(grid, x + 2, y - 2) + getChar(grid, x + 3, y - 3));
-            // diagonal bottom to top left
-            words.push_back(std::string() + getChar(grid, x, y) + getChar(grid, x - 1, y - 1) + getChar(grid, x - 2, y - 2) + getChar(grid, x - 3, y - 3));
 
             for (std::string word : words){
-                if(word == "XMAS"){
+                if(word == "XMAS" || word == "SAMX"){
                     xmasCount++;
                 }
             }
@@ -55,25 +47,12 @@ void Day4::SolvePartTwo()
     {
         for (int x = 0; x < grid[y].size(); x++)
         {
-            std::vector<std::string> words;
-
             // top left to bottom right
-            words.push_back(std::string() + getChar(grid, x, y) + getChar(grid, x + 1, y + 1) + getChar(grid, x + 2, y + 2));
+            auto word = std::string() + getChar(grid, x, y) + getChar(grid, x + 1, y + 1) + getChar(grid, x + 2, y + 2);
             // top right to bottom left
-            words.push_back(std::string() + getChar(grid, x + 2, y) + getChar(grid, x + 1, y + 1) + getChar(grid, x, y + 2));
+            auto word1 = std::string() + getChar(grid, x + 2, y) + getChar(grid, x + 1, y + 1) + getChar(grid, x, y + 2);
 
-            // bottom left to top right
-            words.push_back(std::string() + getChar(grid, x, y + 2) + getChar(grid, x + 1, y + 1) + getChar(grid, x + 2, y));
-            // bottom right to top left
-            words.push_back(std::string() + getChar(grid, x + 2, y + 2) + getChar(grid, x + 1, y + 1) + getChar(grid, x, y));
-
-            int masCounter = 0;
-            for (std::string word : words){
-                if(word == "MAS"){
-                    masCounter++;
-                }
-            }
-            if(masCounter == 2){
+            if((word == "MAS" || word == "SAM") && (word1 == "MAS" || word1 == "SAM")){
                 xmasCount++;
             }
         }
