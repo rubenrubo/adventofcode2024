@@ -3,6 +3,7 @@
 #include "../include/day2.h"
 #include "../include/day3.h"
 #include "../include/day4.h"
+#include "../include/day5.h"
 
 int main() {
     // Day1 day1;
@@ -16,8 +17,12 @@ int main() {
     // day3.SolvePartOne(); 
     // day3.SolvePartTwo(); 
 
-    Day4 day4;
-    day4.SolvePartOne(); 
-    day4.SolvePartTwo(); 
+    // Day4 day4;
+    // day4.SolvePartOne(); 
+    // day4.SolvePartTwo(); 
+
+    Day5 day5;
+    day5.SolvePartOne(); 
+    day5.SolvePartTwo(); 
     return 0;
 }

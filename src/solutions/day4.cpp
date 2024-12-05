@@ -35,7 +35,7 @@ void Day4::SolvePartOne()
             }
         }
     }
-    std::cout << "xmas counter: " << xmasCount;
+    std::cout << "xmas counter: " << xmasCount << std::endl;
 }
 
 void Day4::SolvePartTwo()
@@ -57,7 +57,7 @@ void Day4::SolvePartTwo()
             }
         }
     }
-    std::cout << "xmas counter: " << xmasCount;
+    std::cout << "x-mas counter: " << xmasCount;
 }
 
 char Day4::getChar(const std::vector<std::vector<char>> &grid, int x, int y)
