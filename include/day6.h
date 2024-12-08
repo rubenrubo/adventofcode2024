@@ -1,4 +1,4 @@
-class Day5
+class Day6
 {
 public:
     void SolvePartOne();
