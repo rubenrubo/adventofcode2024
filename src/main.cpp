@@ -7,6 +7,7 @@
 #include "../include/day6.h"
 #include "../include/day7.h"
 #include "../include/day8.h"
+#include "../include/day9.h"
 
 int main() {
     // Day1 day1;
@@ -38,8 +39,12 @@ int main() {
     // day7.SolvePartOne(); 
     // day7.SolvePartTwo(); 
 
-    Day8 day8;
-    day8.SolvePartOne(); 
-    day8.SolvePartTwo();
+    // Day8 day8;
+    // day8.SolvePartOne(); 
+    // day8.SolvePartTwo();
+
+    Day9 day9;
+    day9.SolvePartOne(); 
+    day9.SolvePartTwo();
     return 0;
 }
