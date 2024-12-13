@@ -1,4 +1,6 @@
-g++ -I include src/main.cpp src/solutions/Day1.cpp src/helpers/filereader.cpp -o day1
+g++ -I include src/main.cpp src/solutions/Day1.cpp -o day1
+
+g++-13 -std=c++20 -I include src/main.cpp src/solutions/Day10.cpp -o day10
 
 ./day1.exe
 
